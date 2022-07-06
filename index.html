@@ -33,9 +33,13 @@
                     <ul class="text-white list-unstyled">
                         <li class="bg-primary rounded-2 mt-3 p-3 d-flex justify-content-between" :class="isDone(todo)"
                             v-for="todo in todos"> {{
-                            todo.text }} <span><i @click="removeTodo" class="bi bi-x-circle-fill"></i></span>
+                            todo.text }} <span><i @click="removeTodo" class="bi bi-x-circle"></i></span>
                         </li>
                     </ul>
+                    <div class="d-flex justify-content-between">
+                        <input type="text" v-model="message" placeholder="Scrivi qualcosa">
+                        <button @click="addToDo" class="btn btn-outline-primary">Aggiungi</button>
+                    </div>
                 </div>
             </div>
         </div>

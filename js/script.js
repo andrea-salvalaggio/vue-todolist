@@ -5,6 +5,7 @@ const app = new Vue(
         data: {
 
             lineThroughText: 0,
+            message: '',
 
             todos: [
                 {
@@ -37,8 +38,17 @@ const app = new Vue(
                 this.todos.splice(this.todos.indexOf(todo), 1);
             },
 
-        },
+            // Aggiungo un nuovo todo all'array scrivendo nell'inpunt
+            addToDo: function () {
+                this.todos.push({
+                    text: this.message,
+                    done: false,
+                });
 
+                this.message = '';
+            }
+
+        },
 
     }
 
