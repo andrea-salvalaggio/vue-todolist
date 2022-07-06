@@ -1,3 +1,7 @@
 li.done {
     text-decoration: line-through;
 }
+
+i:hover {
+    cursor: pointer;
+}
