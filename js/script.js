@@ -4,7 +4,6 @@ const app = new Vue(
         el: '#root',
         data: {
 
-            lineThroughText: 0,
             message: '',
 
             todos: [
@@ -46,11 +45,12 @@ const app = new Vue(
                 });
 
                 this.message = '';
-            }
+            },
 
-            // oltre al click sul pulsante,
-            // intercettare anche il tasto ENTER per aggiungere il todo alla lista
-
+            // Clicco sul testo della lista e cambio il valore di 'done' 
+            toggleDone: function (todo) {
+                todo.done = !todo.done;
+            },
 
         },
 
