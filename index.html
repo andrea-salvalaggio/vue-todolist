@@ -27,8 +27,10 @@
             <div class="row w-75 mx-auto mt-5">
                 <div class="col 12 p-0">
                     <h1 class="text-primary rounded-2 border border-1 border-primary p-3">To Do List</h1>
-                    <ul>
-
+                    <ul class="text-white list-unstyled">
+                        <li class="bg-primary rounded-2 mt-3 p-3" :class="isDone(todo)" v-for="todo in todos"> {{
+                            todo.text }}
+                        </li>
                     </ul>
                 </div>
             </div>
