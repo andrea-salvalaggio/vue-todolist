@@ -48,6 +48,10 @@ const app = new Vue(
                 this.message = '';
             }
 
+            // oltre al click sul pulsante,
+            // intercettare anche il tasto ENTER per aggiungere il todo alla lista
+
+
         },
 
     }

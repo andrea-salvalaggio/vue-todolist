@@ -37,7 +37,7 @@
                         </li>
                     </ul>
                     <div class="d-flex justify-content-between">
-                        <input type="text" v-model="message" placeholder="Scrivi qualcosa">
+                        <input type="text" v-model="message" @keyup.enter="addToDo" placeholder="Scrivi qualcosa">
                         <button @click="addToDo" class="btn btn-outline-primary">Aggiungi</button>
                     </div>
                 </div>
