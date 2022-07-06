@@ -25,16 +25,20 @@ const app = new Vue(
 
         methods: {
 
-            //se la proprietà done è uguale a true,
-            // visualizzare il testo del todo sbarrato.
-
+            // Applico classe 'done' ai todo = true
             isDone: function (todo) {
                 if (todo.done) {
                     return 'done';
                 }
             },
 
+            // Rimuovo l'oggetto selezionato dall'array
+            removeTodo: function (todo) {
+                this.todos.splice(this.todos.indexOf(todo), 1);
+            },
+
         },
+
 
     }
 

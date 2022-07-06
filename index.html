@@ -10,6 +10,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
+    <!-- Importing Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
     <!-- Importing CSS -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -28,8 +31,9 @@
                 <div class="col 12 p-0">
                     <h1 class="text-primary rounded-2 border border-1 border-primary p-3">To Do List</h1>
                     <ul class="text-white list-unstyled">
-                        <li class="bg-primary rounded-2 mt-3 p-3" :class="isDone(todo)" v-for="todo in todos"> {{
-                            todo.text }}
+                        <li class="bg-primary rounded-2 mt-3 p-3 d-flex justify-content-between" :class="isDone(todo)"
+                            v-for="todo in todos"> {{
+                            todo.text }} <span><i @click="removeTodo" class="bi bi-x-circle-fill"></i></span>
                         </li>
                     </ul>
                 </div>
